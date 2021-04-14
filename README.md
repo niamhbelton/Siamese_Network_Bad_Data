@@ -18,9 +18,9 @@ The MRNet dataset is available at https://stanfordmlgroup.github.io/competitions
 The splitting of the dataset is outlined in metadata.csv. The columns of the csv are as follow;
 1. 'id' - MRI ID
 2. 'label' - binary values where one indicates that it is bad data
-3. 'test' - binary values where one indicates that it is present in the test set.
-4. 'ref_set' - binary values where one indicates that it is present in the training data for the Siamese Network.
-5. 'iso_set' - binary values where one indicates that it is present in the training data for Isolation Forest.
+3. 'test' - binary values where one indicates that it is present in the test set. There are 739 MRIs in this set.
+4. 'ref_set' - binary values where one indicates that it is present in the training data for the Siamese Network. There are 20 MRIs in the this set.
+5. 'iso_set' - binary values where one indicates that it is present in the training data for Isolation Forest. There are 500 MRIs in this set. 
 
 
 An MRI was labelled as being bad data if it fell into any of the following categories;
