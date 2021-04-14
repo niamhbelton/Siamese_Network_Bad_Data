@@ -23,6 +23,22 @@ The splitting of the dataset is outlined in metadata.csv. The columns of the csv
 5. 'iso_set' - binary values where one indicates that it is present in the training data for Isolation Forest.
 
 
+An MRI was labelled as being bad data if it;
+1. Contained no anatomical information.
+2. Contained no relevant anatomical information.
+3. Most of the important anatomical information is out of view.
+
+
+| MRI ID | Category | #2 |
+| :---: | :---: | :---: |
+| 0003 | 1 | Further description |
+| 0275 | 2 | Data Acquired from Axial Plane |
+| 0544 | 3 |  |
+| 0582 | 1 | |
+| 0864 | 2 | Data Acquired from Coronal Plane |
+| 1159 | 2 | Data Acquired from Coronal Plane |
+| 1230 | 2 | Data Acquired from Coronal Plane |
+
 ## 3. Implementation of the Siamese Network for Identifying Bad Data
 
 
