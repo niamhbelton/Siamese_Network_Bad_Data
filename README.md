@@ -41,8 +41,23 @@ The MRI cases that were considered to be bad data are highlighted in the table b
 | 1230 | 2 | Data Acquired from Axial Plane |
 
 ## 3. Implementation of the Siamese Network for Identifying Bad Data
+The code to implement the Siames network is available in the 'Siamese' folder. 
+### Training
+This scripts assumes the 'metadata.csv' is in your current working directory. The training script takes the following arguments;
 ```
-df
+parser.add_argument('-m', '--model_name', type=str, required=True)
+parser.add_argument('--epochs', type=int, required=True)
+parser.add_argument('--data_path',  required=True)
+parser.add_argument('-i', '--index', help='string with indices separated with comma and whitespace', type=str, default = [], required=False)
+```
+'-m' is the name to call the trained model.
+'--epochs' is to specify the number of epochs
+'--data_path' is the path to where the MRNet data is stored.
+'-i' is the indexes of the MRI cases that will be used as the reference images. They should be input as a string separated by a comma and whitespace. For example, '45, 904, 999, 456'. This argument is not required. The script defaults to 20 reference images.
+
+This script will create an 'outputs' directory and it will output the trained model into the outputs directory. An example of how to run the script is shown below;
+```
+python train.py -m model1 --epochs 6 --data_path '/docs/siamese/MRNet/data/'
 ```
 
 
