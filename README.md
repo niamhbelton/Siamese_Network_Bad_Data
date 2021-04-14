@@ -32,12 +32,12 @@ The MRI cases that were considered to be bad data are highlighted in the table b
 | MRI ID | Category | Further description |
 | :---: | :---: | :---: |
 | 0003 | 1 | - |
-| 0275 | 2 | Data Acquired from Axial Plane |
+| 0275 | 2 | Data Acquired from Coronal Plane |
 | 0544 | 3 | - |
 | 0582 | 1 | - |
 | 0864 | 2 | Data Acquired from Coronal Plane |
 | 1159 | 2 | Data Acquired from Coronal Plane |
-| 1230 | 2 | Data Acquired from Coronal Plane |
+| 1230 | 2 | Data Acquired from Axial Plane |
 
 ## 3. Implementation of the Siamese Network for Identifying Bad Data
 
