@@ -43,7 +43,7 @@ The MRI cases that were considered to be bad data are highlighted in the table b
 ## 3. Implementation of the Siamese Network for Identifying Bad Data
 The code to implement the Siames network is available in the 'Siamese' folder. 
 ### Training
-This scripts assumes the 'metadata.csv' is in your current working directory. The training script takes the following arguments;
+The 'train.py', 'dataloader.py' and 'model.py' scripts are used to train the model. These scripts assume the 'metadata.csv' is in your current working directory. The training script takes the following arguments;
 ```
 parser.add_argument('-m', '--model_name', type=str, required=True)
 parser.add_argument('--epochs', type=int, required=True)
@@ -51,13 +51,37 @@ parser.add_argument('--data_path',  required=True)
 parser.add_argument('-i', '--index', help='string with indices separated with comma and whitespace', type=str, default = [], required=False)
 ```
 '-m' is the name to call the trained model.
-'--epochs' is to specify the number of epochs
+
+'--epochs' is to specify the number of epochs.
+
 '--data_path' is the path to where the MRNet data is stored.
+
 '-i' is the indexes of the MRI cases that will be used as the reference images. They should be input as a string separated by a comma and whitespace. For example, '45, 904, 999, 456'. This argument is not required. The script defaults to 20 reference images.
 
 This script will create an 'outputs' directory and it will output the trained model into the outputs directory. An example of how to run the script is shown below;
 ```
 python train.py -m model1 --epochs 6 --data_path '/docs/siamese/MRNet/data/'
+```
+
+### Testing
+The 'evaluate.py' script will test the model on the test set. The evaluate script takes the following arguments;
+```
+parser.add_argument('-m', '--model_name', type=str, required=True)
+parser.add_argument('-o', '--output_name', type=str, required=True)
+parser.add_argument('--data_path',  required=True)
+parser.add_argument('-i', '--index', help='string with indices separated with comma and whitespace', type=str, default = [], required=False)
+```
+'-m' is the name of the model that is being tested. This is in the 'outputs' directory.
+
+'-o' is the name of the file to write out the Mean Euclidean Distance of each test case. This will be written out the the 'outputs' directory.
+
+'--data_path' is the path to where the MRNet data is stored.
+
+'-i' is the indexes of the MRI cases that will be used as the reference images. They should be input as a string separated by a comma and whitespace. For example, '45, 904, 999, 456'. This argument is not required. The script defaults to 20 reference images.
+
+An example of how to run the script to test the model is shown below;
+```
+python evaluate.py -m model1 -o results.csv --data_path '/docs/siamese/MRNet/data/'
 ```
 
 
