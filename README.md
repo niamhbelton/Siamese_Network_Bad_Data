@@ -29,12 +29,12 @@ An MRI was labelled as being bad data if it;
 3. Most of the important anatomical information is out of view.
 
 
-| MRI ID | Category | #2 |
+| MRI ID | Category | Further description |
 | :---: | :---: | :---: |
-| 0003 | 1 | Further description |
+| 0003 | 1 | - |
 | 0275 | 2 | Data Acquired from Axial Plane |
-| 0544 | 3 |  |
-| 0582 | 1 | |
+| 0544 | 3 | - |
+| 0582 | 1 | - |
 | 0864 | 2 | Data Acquired from Coronal Plane |
 | 1159 | 2 | Data Acquired from Coronal Plane |
 | 1230 | 2 | Data Acquired from Coronal Plane |
