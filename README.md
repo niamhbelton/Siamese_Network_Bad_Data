@@ -1,6 +1,10 @@
 # Semi-Supervised Siamese Network for Identifying Bad Data in Medical Imaging Datasets
 
-This repository is under construction.
+This repository is under construction. This is the official repository for the 'Semi-Supervised Siamese Network for Identifying Bad Data in Medical Imaging Datasets' paper.
+
+## Abstract
+Noisy data present in medical imaging datasets can often aid the development of robust models that are equipped to handle real-world data. However, if the bad data contains insufficient anatomical information it can have a severe negative effect on the model’s performance. We propose a novel methodology using a semi-supervised Siamese network to identify bad data. This method requires only a small pool of ‘reference’ images to be reviewed by a non-expert human to ensure the major anatomical structures are present in the Field of View (FOV). The model trains on these reference images and identifies bad data by using the Siamese network to compute the distance between the reference images and all other images in the dataset. This methodology achieves an Area Under the Curve (AUC) of 0.989 for identifying bad data. 
+
 
 ## Contents
 1. Data.
