@@ -20,7 +20,6 @@ class ContrastiveLoss(torch.nn.Module):
     
 def train(model, train_dataset, epochs, criterion, model_name, indexes):
     device='cuda'
-    losses = []
     if not os.path.exists('outputs'):
         os.makedirs('outputs')
     for epoch in range(epochs):
@@ -42,11 +41,8 @@ def train(model, train_dataset, epochs, criterion, model_name, indexes):
             optimizer.zero_grad()
             loss.backward()
             optimizer.step()
-            losses.append(loss.detach().cpu().numpy())
 
     torch.save(model, './outputs/' + model_name)
-    pd.DataFrame(losses).to_csv('./outputs/losses_model_name_{}'.format(model_name))
-        
     print("Finished Training")  
 
 
