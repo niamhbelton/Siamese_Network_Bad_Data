@@ -23,12 +23,12 @@ The splitting of the dataset is outlined in metadata.csv. The columns of the csv
 5. 'iso_set' - binary values where one indicates that it is present in the training data for Isolation Forest.
 
 
-An MRI was labelled as being bad data if it;
+An MRI was labelled as being bad data if it fell into any of the following categories;
 1. Contained no anatomical information.
-2. Contained no relevant anatomical information.
+2. Contained no relevant anatomical information. For example, when training a model to detect ACL tears on sagittal data, an MRI from the axial or coronal plane is not informative.
 3. Most of the important anatomical information is out of view.
 
-
+The MRI cases that were considered to be bad data are highlighted in the table below.
 | MRI ID | Category | Further description |
 | :---: | :---: | :---: |
 | 0003 | 1 | - |
