@@ -41,7 +41,9 @@ The MRI cases that were considered to be bad data are highlighted in the table b
 | 1230 | 2 | Data Acquired from Axial Plane |
 
 ## 3. Implementation of the Siamese Network for Identifying Bad Data
-
+"""
+df
+"""
 
 
 ## 4. Implementation of Isolation Forest for Identifying Bad Data
