@@ -45,7 +45,9 @@ The MRI cases that were considered to be bad data are highlighted in the table b
 | 1230 | 2 | Data Acquired from Axial Plane |
 
 ## 3. Implementation of the Siamese Network for Identifying Bad Data
-The code to implement the Siamese network is available in the 'Siamese' folder. 
+The code to implement the Siamese network is available in the 'Siamese' folder. The sensitivity and specificity was calculated based on the largest Euclidean Distance between reference images in the final epoch. This value was 0.9166.
+
+
 ### Training
 The 'train.py', 'dataloader.py' and 'model.py' scripts are used to train the model. These scripts assume the 'metadata.csv' is in your current working directory. The training script takes the following arguments;
 ```
