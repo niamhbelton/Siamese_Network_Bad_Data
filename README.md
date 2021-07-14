@@ -6,7 +6,7 @@ This repository is under construction. This is the official repository for the '
 Noisy data present in medical imaging datasets can often aid the development of robust models that are equipped to handle real-world data. However, if the bad data contains insufficient anatomical information, it can have a severe negative effect on the model's performance. We propose a novel methodology using a semi-supervised Siamese network to identify bad data. This method requires only a small pool of \lq{}reference\rq{} medical images to be reviewed by a non-expert human to ensure the major anatomical structures are present in the Field of View. The model trains on this reference set and identifies bad data by using the Siamese network to compute the distance between the reference set and all other medical images in the dataset. This methodology achieves an Area Under the Curve (AUC) of 0.989 for identifying bad data. 
 
 
-![GitHub Logo](/images/figure_paper.png)
+![GitHub Logo](/Images/figure_paper.png)
 
 
 
