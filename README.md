@@ -18,7 +18,9 @@ Noisy data present in medical imaging datasets can often aid the development of 
 2. Splitting the data and labelling process.
 3. Dataloader for clean data only.
 4. Models
+
     (A) Implementation of the Siamese Network for identifying bad data.
+    
     (B) Implementation of Isolation Forest for identifying bad data.
 
 
