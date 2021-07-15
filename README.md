@@ -54,10 +54,10 @@ The MRI cases that were considered to be bad data are highlighted in the table b
 | 1230 | 2 | Data Acquired from Axial Plane |
 
 
-##3. Dataloader for Clean Data only.
+## 3. Dataloader for Clean Data only.
 This directory contains a Data Loader for the MRNet dataset in Pytorch that loads only clean data.
 
-##4. Models
+## 4. Models
 ### (A) Implementation of the Siamese Network for Identifying Bad Data
 The code to implement the Siamese network is available in the 'Siamese' folder. The sensitivity and specificity was calculated based on the largest Euclidean Distance between reference images in the final epoch. This value was 0.9166.
 
