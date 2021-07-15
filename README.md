@@ -16,8 +16,10 @@ Noisy data present in medical imaging datasets can often aid the development of 
 ## Contents
 1. Data.
 2. Splitting the data and labelling process.
-3. Implementation of the Siamese Network for identifying bad data.
-4. Implementation of Isolation Forest for identifying bad data.
+3. Dataloader for clean data only.
+4. Models
+    (A) Implementation of the Siamese Network for identifying bad data.
+    (B) Implementation of Isolation Forest for identifying bad data.
 
 
 
@@ -51,7 +53,12 @@ The MRI cases that were considered to be bad data are highlighted in the table b
 | 1159 | 2 | Data Acquired from Coronal Plane |
 | 1230 | 2 | Data Acquired from Axial Plane |
 
-## 3. Implementation of the Siamese Network for Identifying Bad Data
+
+##3. Dataloader for Clean Data only.
+This directory contains a Data Loader for the MRNet dataset in Pytorch that loads only clean data.
+
+##4. Models
+### (A) Implementation of the Siamese Network for Identifying Bad Data
 The code to implement the Siamese network is available in the 'Siamese' folder. The sensitivity and specificity was calculated based on the largest Euclidean Distance between reference images in the final epoch. This value was 0.9166.
 
 
@@ -98,6 +105,6 @@ python evaluate.py -m model1 -o results.csv --data_path '/docs/siamese/MRNet/dat
 ```
 
 
-## 4. Implementation of Isolation Forest for Identifying Bad Data
+### (B) Implementation of Isolation Forest for Identifying Bad Data
 The implemetation of Isolation Forest can be found in isolation_forest.ipynb. The features in the model were pixel histograms. Six bins were used in this analysis.
 
