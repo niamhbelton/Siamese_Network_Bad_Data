@@ -7,7 +7,6 @@ class Net(nn.Module):
         super(Net, self).__init__()
         self.pretrained_model = models.alexnet(pretrained=True)
         self.pooling_layer = nn.AdaptiveAvgPool2d(1)
-        self.fcOut = nn.Linear(256, 1)
         self.sigmoid = nn.Sigmoid()
         
         
