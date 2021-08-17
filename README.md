@@ -1,9 +1,9 @@
 # Semi-Supervised Siamese Network for Identifying Bad Data in Medical Imaging Datasets
 
-This is the repository for the 'Semi-Supervised Siamese Network for Identifying Bad Data in Medical Imaging Datasets' paper.
+This is the repository for '[Semi-Supervised Siamese Network for Identifying Bad Data in Medical Imaging Datasets](https://arxiv.org/pdf/2108.07130.pdf)'.
 
 ## Citation 
-Belton, N., Lawlor, A., Curran, K., "Semi-Supervised Siamese Network for Identifying Bad Data in Medical Imaging Datasets" Medical Imaging with Deep Learning (MIDL), 2021.
+Belton, N., Lawlor, A., Curran, K., "Semi-Supervised Siamese Network for Identifying Bad Data in Medical Imaging Datasets" Medical Imaging with Deep Learning (MIDL), 2021. https://arxiv.org/pdf/2108.07130.pdf
 
 ## Abstract
 Noisy data present in medical imaging datasets can often aid the development of robust models that are equipped to handle real-world data. However, if the bad data contains insufficient anatomical information, it can have a severe negative effect on the model's performance. We propose a novel methodology using a semi-supervised Siamese network to identify bad data. This method requires only a small pool of 'reference' medical images to be reviewed by a non-expert human to ensure the major anatomical structures are present in the Field of View. The model trains on this reference set and identifies bad data by using the Siamese network to compute the distance between the reference set and all other medical images in the dataset. This methodology achieves an Area Under the Curve (AUC) of 0.989 for identifying bad data. 
@@ -16,7 +16,7 @@ Noisy data present in medical imaging datasets can often aid the development of 
 ## Contents
 1. Data.
 2. Splitting the data and labelling process.
-3. Dataloader for clean data only.
+3. Description of a basic Data Loader that loads clean data only.
 4. Models
 
     (A) Implementation of the Siamese Network for identifying bad data.
@@ -56,8 +56,8 @@ The MRI cases that were considered to be bad data are highlighted in the table b
 | 1230 | 2 | Data Acquired from Axial Plane |
 
 
-## 3. Dataloader for Clean Data only.
-This directory contains a Data Loader for the MRNet dataset in Pytorch that loads only clean data.
+## 3. Description of a basic Data Loader that loads clean data only.
+The directory Clean_Dataloader is a basic data loader written in Pytorch that loads the clean data only. The init function removes the bad data from the dataset. 
 
 ## 4. Models
 ### (A) Implementation of the Siamese Network for Identifying Bad Data
